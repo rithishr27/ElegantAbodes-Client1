@@ -127,7 +127,7 @@ const CreateListing = ()=> {
             return setError('Discount price must be lower than regular price');
           setLoading(true);
           setError(false);
-          const res = await fetch('https://elegantabodes-server1.onrender.com/api/listing/create', {
+          const res = await fetch('https://elegantabodes-server.onrender.com/api/listing/create', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

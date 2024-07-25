@@ -32,7 +32,7 @@ const Listing = ()=> {
         const fetchData = async() => {
             try {
                 setLoading(true);
-                const res = await fetch(`https://elegantabodes-server1.onrender.com/api/listing/getData/${params.id}`);
+                const res = await fetch(`https://elegantabodes-server.onrender.com/api/listing/getData/${params.id}`);
                 const data = await res.json(); 
                 setFormData(data);
                 if(data.success===false){

@@ -37,7 +37,7 @@ const UpdateListing = ()=> {
     useEffect(() => {
         const fetchData = async () => {
           try {
-            const res = await fetch(`https://elegantabodes-server1.onrender.com/api/listing/getData/${params.id}`);
+            const res = await fetch(`https://elegantabodes-server.onrender.com/api/listing/getData/${params.id}`);
             const data = await res.json();
             setFormData(data);
           } catch (error) {

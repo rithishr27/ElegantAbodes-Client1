@@ -20,7 +20,7 @@ const SignUp = () => {
   const handleSubmit = (e)=> {
     e.preventDefault();
     setLoading(true);
-    axios.post('https://elegantabodes-server1.onrender.com/api/auth/signup',formData)
+    axios.post('https://elegantabodes-server.onrender.com/api/auth/signup',formData)
     .then((res)=> {
       setLoading(false);
       alert("Successfully SignedUp");

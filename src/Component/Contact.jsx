@@ -11,7 +11,7 @@ const Contact = ({ listing })=>{
   useEffect(() => {
     const fetchLandlord = async () => {
       try {
-        const res = await fetch(`https://elegantabodes-server1.onrender.com/api/user/${listing.userRef}`);
+        const res = await fetch(`https://elegantabodes-server.onrender.com/api/user/${listing.userRef}`);
         const data = await res.json();
         setLandlord(data);
       } catch (error) {

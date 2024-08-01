@@ -27,6 +27,7 @@ const Profile = () => {
   const [show,setShow] = useState(false);
   const [listingError,setListingError] = useState(false);
   const [confirmDelete,setConfirmDelete] = useState(false);
+  const [edit,setEdit] = useState(false);
   const dispatch = useDispatch();
 
   console.log(formData);

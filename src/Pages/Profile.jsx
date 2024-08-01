@@ -177,8 +177,14 @@ const Profile = () => {
   }
 
   return (
-      <div className='p-3 max-w-lg mx-auto'>
-        <h1 className='text-3xl font-semibold text-center my-7'>Profile</h1>
+      <div className='p-3 max-w-lg mx-auto relative'>
+        <h1 className='text-3xl font-semibold text-center my-5'>Profile</h1>
+        {!edit && <div className='absolute right-5 flex items-center gap-1 cursor-pointer' onClick={() => setEdit(true)}>
+          <BsPencilSquare/>
+          <p >Edit</p>
+        </div>}
+        {edit && <div className='absolute right-5 flex items-center gap-1 cursor-pointer text-red-500' onClick={() => setEdit(false)}>Cancel</div>
+        }
         <form 
           className='flex flex-col'
           onSubmit={handleUpdate}
@@ -226,9 +232,9 @@ const Profile = () => {
             onChange={handleChange} 
           />
 
-          <button className='border p-3 uppercase rounded-lg mt-4 bg-slate-600 text-white hover:opacity-95 hover:disabled:opacity-80'>
+          {edit && <button className='border p-3 uppercase rounded-lg mt-4 bg-slate-600 text-white hover:opacity-95 hover:disabled:opacity-80'>
             Update
-          </button>
+          </button>}
 
           <Link to={'/CreateListing'} className='border p-3 text-center uppercase rounded-lg mt-4 bg-green-600 text-white hover:opacity-95 hover:disabled:opacity-80'>
             Create Listing

@@ -69,6 +69,7 @@ const Profile = () => {
 
   const handleUpdate = async (e)=> {
     e.preventDefault();
+    setEdit(false);
     try {
       dispatch(updateUserStart());
       const res = await fetch(`https://elegantabodes-server.onrender.com/api/user/update/${currentUser._id}`, {
